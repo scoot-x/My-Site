@@ -3,39 +3,292 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Site</title>
+
+  <title>ScootersTV | THEA1200 Games</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #f5f5f5;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #eeeeee;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #ffffff;
+      text-align: center;
+      padding: 55px 20px;
+      border-bottom: 5px solid #333;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: clamp(2.5rem, 8vw, 5rem);
+      letter-spacing: 2px;
+    }
+
+    header p {
+      margin: 10px 0 0;
+      font-size: 1.25rem;
+    }
+
+    nav {
+      background: #222;
+      text-align: center;
+      padding: 14px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 18px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
     }
 
     main {
-      text-align: center;
-      padding: 40px;
+      width: min(1200px, 92%);
+      margin: auto;
     }
 
-    h1 {
-      font-size: 3rem;
+    .hero {
+      margin: 40px 0;
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .hero-image {
+      min-height: 350px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #ddd;
+      border: 2px dashed #999;
+      border-radius: 6px;
+      margin-bottom: 25px;
+      padding: 20px;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
       margin-bottom: 10px;
     }
 
-    p {
-      font-size: 1.2rem;
+    section {
+      margin: 60px 0;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 30px;
+    }
+
+    .games-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 22px;
+    }
+
+    .game-card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+      transition: transform 0.2s ease;
+    }
+
+    .game-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .game-image {
+      height: 180px;
+      background: #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #555;
+    }
+
+    .game-info {
+      padding: 18px;
+    }
+
+    .game-info h3 {
+      margin-top: 0;
+    }
+
+    .game-info p {
+      margin-bottom: 0;
+      color: #555;
+    }
+
+    .box-section {
+      background: white;
+      padding: 35px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .box-image {
+      min-height: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #ddd;
+      border: 2px dashed #999;
+      border-radius: 6px;
+      margin-top: 25px;
+    }
+
+    footer {
+      margin-top: 70px;
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 8px;
+      }
+
+      .hero {
+        padding: 20px;
+      }
     }
   </style>
 </head>
 
 <body>
+
+  <header>
+    <h1>ScootersTV</h1>
+    <p>Exploring the games of THEA1200</p>
+  </header>
+
+  <nav>
+    <a href="#about">THEA1200</a>
+    <a href="#games">25 Games</a>
+    <a href="#box">What's in the Box?</a>
+  </nav>
+
   <main>
-    <h1>Welcome to My Site</h1>
-    <p>This is my new home on the web.</p>
+
+    <section class="hero" id="about">
+
+      <div class="hero-image">
+        Your main THEA1200 image will go here
+      </div>
+
+      <h2>THEA1200 Has Arrived</h2>
+
+      <p>
+        Welcome to ScootersTV and my guide to THEA1200.
+        Here I'll be taking a closer look at the 25 included games,
+        with screenshots, descriptions, reviews and my own thoughts
+        on each title.
+      </p>
+
+    </section>
+
+
+    <section id="games">
+
+      <h2>The 25 Games</h2>
+
+      <div class="games-grid">
+
+        <div class="game-card">
+          <div class="game-image">Game image</div>
+          <div class="game-info">
+            <h3>Game 01</h3>
+            <p>Review coming soon.</p>
+          </div>
+        </div>
+
+        <div class="game-card">
+          <div class="game-image">Game image</div>
+          <div class="game-info">
+            <h3>Game 02</h3>
+            <p>Review coming soon.</p>
+          </div>
+        </div>
+
+        <div class="game-card">
+          <div class="game-image">Game image</div>
+          <div class="game-info">
+            <h3>Game 03</h3>
+            <p>Review coming soon.</p>
+          </div>
+        </div>
+
+        <div class="game-card">
+          <div class="game-image">Game image</div>
+          <div class="game-info">
+            <h3>Game 04</h3>
+            <p>Review coming soon.</p>
+          </div>
+        </div>
+
+        <div class="game-card">
+          <div class="game-image">Game image</div>
+          <div class="game-info">
+            <h3>Game 05</h3>
+            <p>Review coming soon.</p>
+          </div>
+        </div>
+
+        <div class="game-card">
+          <div class="game-image">Game image</div>
+          <div class="game-info">
+            <h3>Game 06</h3>
+            <p>Review coming soon.</p>
+          </div>
+        </div>
+
+        <!-- Duplicate the game-card block until all 25 games are added -->
+
+      </div>
+
+    </section>
+
+
+    <section class="box-section" id="box">
+
+      <h2>What's in the Box?</h2>
+
+      <p>
+        A closer look at THEA1200 itself, the controller, mouse,
+        quick-start guide and the special Zzap! Amiga magazine
+        included with the initial release.
+      </p>
+
+      <div class="box-image">
+        Your THEA1200 box and accessories image will go here
+      </div>
+
+    </section>
+
   </main>
+
+
+  <footer>
+    <p>&copy; 2026 ScootersTV</p>
+  </footer>
+
 </body>
 </html>
